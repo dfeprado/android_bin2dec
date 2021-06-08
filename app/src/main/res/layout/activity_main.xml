@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/input_label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_a_binary_number"
+        app:layout_constraintBottom_toTopOf="@+id/binary_input"
+        app:layout_constraintEnd_toEndOf="@+id/binary_input"
+        app:layout_constraintStart_toStartOf="@+id/binary_input"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/binary_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:digits="01"
+        android:maxLength="8"
+        app:layout_constraintBottom_toTopOf="@+id/convert_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_label_text" />
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/convert_action"
+        app:layout_constraintBottom_toTopOf="@+id/decimal_label_text"
+        app:layout_constraintEnd_toEndOf="@+id/binary_input"
+        app:layout_constraintStart_toStartOf="@+id/binary_input"
+        app:layout_constraintTop_toBottomOf="@+id/binary_input" />
+
+    <TextView
+        android:id="@+id/decimal_label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/here_are_your_decimal_number"
+        app:layout_constraintBottom_toTopOf="@+id/decimal_input"
+        app:layout_constraintEnd_toEndOf="@+id/decimal_input"
+        app:layout_constraintStart_toStartOf="@+id/decimal_input"
+        app:layout_constraintTop_toBottomOf="@+id/convert_button" />
+
+    <EditText
+        android:id="@+id/decimal_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="none"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decimal_label_text"
+        android:textIsSelectable="true" />
+</androidx.constraintlayout.widget.ConstraintLayout>

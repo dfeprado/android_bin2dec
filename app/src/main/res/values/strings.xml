@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Bin2Dec</string>
+    <string name="input_a_binary_number">Input a binary number:</string>
+    <string name="here_are_your_decimal_number">Here are your decimal number:</string>
+    <string name="convert_action">Convert</string>
+</resources>
